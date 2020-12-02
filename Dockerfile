@@ -9,6 +9,8 @@ RUN date
 RUN apt update && apt install -y cron openssl coreutils git wget tzdata
 RUN apt update && apt install -y nodejs
 RUN apt update && apt install -y npm
+RUN ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN dpkg-reconfigure -f noninteractive tzdata
 WORKDIR /
 COPY sync.sh /sync.sh
 RUN bash /sync.sh
