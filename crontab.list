@@ -8,8 +8,10 @@
 0 0,6 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_joy_steal.js | sed "s/^/ 【宠汪汪偷好友狗粮与积分】/"; '
 6 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_shop.js | sed "s/^/ 【进店领豆脚本】/"; '
 11 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_club_lottery.js | sed "s/^/ 【摇京豆脚本】/"; '
-16 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; MARKET_COIN_TO_BEANS=1000; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_blueCoin.js | sed "s/^/ 【京小超兑换1000豆】/"; '
+16 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_small_home.js | sed "s/^/ 【东东小窝】/"; '
 21 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_bean_sign.js | sed "s/^/ 【京豆签到脚本】/"; '
+26 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; MARKET_COIN_TO_BEANS=1000; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_blueCoin.js | sed "s/^/ 【京小超兑换1000豆】/"; '
+
 
 1 1 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_redPacket.js | sed "s/^/ 【全民开红包脚本】/"; '
 6 1,20 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_necklace.js | sed "s/^/ 【点点券】/"; '
@@ -17,10 +19,10 @@
 16 1,8,9,12,18,23 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_joy.js | sed "s/^/ 【宠汪汪】/"; '
 25 1-17/8 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_joy_reward.js | sed "s/^/ 【宠汪汪积分兑换京豆】/"; '
 
+
 5 2 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_car.js | sed "s/^/ 【京东汽车】/"; '
 11 5 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_blueCoin.js | sed "s/^/ 【京小超兑换奖品】/"; '
 
-16 6 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_small_home.js | sed "s/^/ 【东东小窝】/"; '
 
 11 7,11,18 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_fruit.js | sed "s/^/ 【东东农场】/"; '
 26 7,11,18 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_pet.js | sed "s/^/ 【东东萌宠】/"; '
