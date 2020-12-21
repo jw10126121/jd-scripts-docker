@@ -53,6 +53,3 @@
 # 11 13 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_digital_floor.js | sed "s/^/ 【1211金榜年终奖】/"; '
 # 11 21 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_pubg.js | sed "s/^/ 【1213PUBG】/"; '
 
-
-9 */1 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(($RANDOM%20)) && echo "aaaaa" >> /aaa.txt | sed "s/^/ 【testsleep1】/"; '
-9 */1 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(($RANDOM\%20)) && echo "bbb" >> /bbb.txt | sed "s/^/ 【testsleep2】/"; '
