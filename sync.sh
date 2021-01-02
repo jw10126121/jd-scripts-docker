@@ -13,7 +13,7 @@ git clone --branch=master --depth=1 https://github.com/lxk0301/jd_scripts.git /s
 
 git clone --depth=1 https://github.com/shylocks/Loon.git /jkd_scripts_tmp
 [ -d /jkd_scripts_tmp ] && {
-  rm -rf /jkd_scripts_tmp
+  [ -d /jkd_scripts ] && rm -rf /jkd_scripts
   mv /jkd_scripts_tmp /jkd_scripts
 }
 
