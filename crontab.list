@@ -4,11 +4,11 @@
 */23 */3 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_joy_feedPets.js | sed "s/^/ 【宠汪汪喂食脚本】/"; '
 43 6-22/2 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_plantBean.js | sed "s/^/ 【种豆得豆】/"; '
 31 1-23/4 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_superMarket.js | sed "s/^/ 【东东超市】/"; '
-
+36 8,12,18 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_bookshop.js | sed "s/^/ 【口袋书店】/"; '
 
 0 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-2) && node /scripts/jd_car.js | sed "s/^/ 【京东汽车】/"; '
 0 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-2) && node /scripts/jd_car_exchange.js | sed "s/^/ 【京东汽车旅程赛点兑换金豆】/"; '
-4 0,6 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_joy_steal.js | sed "s/^/ 【宠汪汪偷好友狗粮与积分】/"; '
+4 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_blueCoin.js | sed "s/^/ 【京小超兑换奖品】/"; '
 8 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_shop.js | sed "s/^/ 【进店领豆脚本】/"; '
 13 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_club_lottery.js | sed "s/^/ 【摇京豆脚本】/"; '
 18 0 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_small_home.js | sed "s/^/ 【东东小窝】/"; '
@@ -22,9 +22,7 @@
 23 1-17/8 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_joy_reward.js | sed "s/^/ 【宠汪汪积分兑换京豆】/"; '
 27 1 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; MARKET_COIN_TO_BEANS=1000; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_blueCoin.js | sed "s/^/ 【京小超兑换1000豆】/"; '
 
-
-11 5 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_blueCoin.js | sed "s/^/ 【京小超兑换奖品】/"; '
-
+4 1,6 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_joy_steal.js | sed "s/^/ 【宠汪汪偷好友狗粮与积分】/"; '
 11 6 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_jdzz.js | sed "s/^/ 【微信小程序京东赚赚】/"; '
 
 11 7,11,18 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_fruit.js | sed "s/^/ 【东东农场】/"; '
@@ -43,6 +41,9 @@
 # 0 14 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_watch.js | sed "s/^/ 【看一看】/"; '
 
 11 15 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_bean_home.js | sed "s/^/ 【领京豆额外奖励】/"; '
+16 15 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_cash.js | sed "s/^/ 【签到领现金】/"; '
+# 21 15 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jx_sign.js | sed "s/^/ 【京喜签到】/"; '
+
 
 1 23 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_unsubscribe.js | sed "s/^/ 【京东取关商品】/"; '
 
