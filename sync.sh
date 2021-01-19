@@ -16,12 +16,12 @@ git clone --branch=master --depth=1 https://github.com/LXK9301/jd_scripts.git /s
   mv /scripts_tmp /scripts
 }
 
-# # 聚看点
-# git clone --depth=1 https://github.com/shylocks/Loon.git /jkd_scripts_tmp
-# [ -d /jkd_scripts_tmp ] && {
-#   [ -d /jkd_scripts ] && rm -rf /jkd_scripts
-#   mv /jkd_scripts_tmp /jkd_scripts
-# }
+# # shylocks脚本
+git clone --depth=1 https://github.com/shylocks/Loon.git /shylocks_scripts_tmp
+[ -d /shylocks_scripts_tmp ] && {
+  [ -d /shylocks_scripts ] && rm -rf /shylocks_scripts
+  mv /shylocks_scripts_tmp /shylocks_scripts
+}
 
 # # Sunert脚本
 # git clone --depth=1 https://github.com/Sunert/Scripts.git /sunert_scripts_tmp
