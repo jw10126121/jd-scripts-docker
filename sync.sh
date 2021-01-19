@@ -19,7 +19,7 @@ git clone --branch=master --depth=1 https://github.com/LXK9301/jd_scripts.git /s
 # # shylocks脚本
 git clone --depth=1 https://github.com/shylocks/Loon.git /shylocks_scripts_tmp
 [ -d /shylocks_scripts_tmp ] && {
-  [ -f /shylocks_scripts_tmp/jdCookie.js ] && {
+  [ ! -f /shylocks_scripts_tmp/jdCookie.js ] && {
   	 cp -fr /scripts/jdCookie.js /shylocks_scripts_tmp/jdCookie.js
   }
   [ -d /shylocks_scripts ] && rm -rf /shylocks_scripts
