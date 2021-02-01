@@ -3,7 +3,7 @@ x-logger: &logger
   logging:
     driver: "json-file"
     options:
-      max-size: "5m"
+      max-size: "3m"
       max-file: "3"
 x-common: &common
   image: jd-scripts:latest
