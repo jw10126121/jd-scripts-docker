@@ -5,8 +5,8 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
   rm -rf /jd-scripts-docker
   mv /jd-scripts-docker_tmp /jd-scripts-docker
 }
-git clone --branch=master --depth=1 https://github.com/LXK9301/jd_scripts.git /scripts_tmp
-# git clone --branch=master --depth=1 https://gitee.com/lxk0301/jd_scripts.git /scripts_tmp
+# git clone --branch=master --depth=1 https://github.com/LXK9301/jd_scripts.git /scripts_tmp
+git clone --branch=master --depth=1 https://gitee.com/lxk0301/jd_scripts.git /scripts_tmp
 [ ! -d /scripts_tmp ] && {
   git clone --branch=master --depth=1 https://gitee.com/lxk0301/jd_scripts.git /scripts_tmp
 }
@@ -17,14 +17,14 @@ git clone --branch=master --depth=1 https://github.com/LXK9301/jd_scripts.git /s
 }
 
 # # shylocks脚本
-git clone --depth=1 https://github.com/shylocks/Loon.git /shylocks_scripts_tmp
-[ -d /shylocks_scripts_tmp ] && {
-  [ ! -f /shylocks_scripts_tmp/jdCookie.js ] && {
-  	 cp -fr /scripts/jdCookie.js /shylocks_scripts_tmp/jdCookie.js
-  }
-  [ -d /shylocks_scripts ] && rm -rf /shylocks_scripts
-  mv /shylocks_scripts_tmp /shylocks_scripts
-}
+# git clone --depth=1 https://github.com/shylocks/Loon.git /shylocks_scripts_tmp
+# [ -d /shylocks_scripts_tmp ] && {
+#   [ ! -f /shylocks_scripts_tmp/jdCookie.js ] && {
+#   	 cp -fr /scripts/jdCookie.js /shylocks_scripts_tmp/jdCookie.js
+#   }
+#   [ -d /shylocks_scripts ] && rm -rf /shylocks_scripts
+#   mv /shylocks_scripts_tmp /shylocks_scripts
+# }
 
 # # Sunert脚本
 # git clone --depth=1 https://github.com/Sunert/Scripts.git /sunert_scripts_tmp
