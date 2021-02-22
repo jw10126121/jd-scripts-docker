@@ -5,7 +5,10 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
   echo '复制jd-scripts-docker_tmp到jd-scripts-docker'
   rm -rf /jd-scripts-docker
   mv /jd-scripts-docker_tmp /jd-scripts-docker
+
+   echo '取出codeKey'
   cat /jd-scripts-docker/env/codeKey > /codeKey
+  echo '取出sync'
   cat /jd-scripts-docker/sync.sh > /sync
 }
 
