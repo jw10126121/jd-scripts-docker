@@ -4,9 +4,9 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
 [ -d /jd-scripts-docker_tmp ] && {
   rm -rf /jd-scripts-docker
   mv /jd-scripts-docker_tmp /jd-scripts-docker
+  [ -e /codeKey ] && { rm -rf /codeKey }
+  cp /jd-scripts-docker/env/codeKey /codeKey
 }
-
-
 
 
 # git clone -b master git@gitee.com:lxk0301/jd_scripts.git /scripts_tmp
