@@ -4,13 +4,13 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
 [ -d /jd-scripts-docker_tmp ] && {
   rm -rf /jd-scripts-docker
   mv /jd-scripts-docker_tmp /jd-scripts-docker
-  [ -e /codeKey ] && { rm -rf /codeKey }
+  # [ -e /codeKey ] && { rm -rf /codeKey }
   cat /jd-scripts-docker/env/codeKey > /codeKey
 }
 
 
 # git clone -b master git@gitee.com:lxk0301/jd_scripts.git /scripts_tmp
-git clone --branch=master --depth=1 https://gitee.com/lxk0301/jd_scripts.git /scripts_tmp
+# git clone --branch=master --depth=1 https://gitee.com/lxk0301/jd_scripts.git /scripts_tmp
 [ ! -d /scripts_tmp ] && {
   # 添加KEY
   [ -e /codeKey ] && {
@@ -18,7 +18,8 @@ git clone --branch=master --depth=1 https://gitee.com/lxk0301/jd_scripts.git /sc
     cat /codeKey > /root/.ssh/id_rsa
     chmod 700 /root/.ssh/id_rsa
     ssh-keyscan gitee.com > /root/.ssh/known_hosts
-    git clone -b master git@gitee.com:lxk0301/jd_scripts.git /scripts_tmp
+    git clone --branch=master --depth=1 git@gitee.com:lxk0301/jd_scripts.git /scripts_tmp
+    # git clone -b master git@gitee.com:lxk0301/jd_scripts.git /scripts_tmp
   }
 }
 
