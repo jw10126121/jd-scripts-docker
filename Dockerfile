@@ -10,6 +10,7 @@ RUN apt update && apt install -y npm
 RUN ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN dpkg-reconfigure -f noninteractive tzdata
 RUN date
+RUN mkdir -p /root/.ssh
 
 WORKDIR /
 COPY sync.sh /sync.sh
