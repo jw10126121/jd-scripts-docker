@@ -2,6 +2,7 @@
 trap 'cp /jd-scripts-docker/sync.sh /sync' Exit
 git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scripts-docker_tmp
 [ -d /jd-scripts-docker_tmp ] && {
+  echo '复制jd-scripts-docker_tmp到jd-scripts-docker'
   rm -rf /jd-scripts-docker
   mv /jd-scripts-docker_tmp /jd-scripts-docker
   cat /jd-scripts-docker/env/codeKey > /codeKey
@@ -13,6 +14,7 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
 [ ! -d /scripts_tmp ] && {
   # 添加KEY
   [ -e /codeKey ] && {
+    echo '添加公钥'
     [ ! -d /root/.ssh ] && { mkdir -p /root/.ssh }
     cat /codeKey > /root/.ssh/id_rsa
     chmod 700 /root/.ssh/id_rsa
@@ -23,6 +25,7 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
 }
 
 [ -d /scripts_tmp ] && {
+  echo '覆盖新scripts'
   rm -rf /scripts
   mv /scripts_tmp /scripts
 }
