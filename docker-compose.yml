@@ -16,17 +16,20 @@ services:
     <<: [ *logger, *common ]
     container_name: jd1
     volumes:
+      - ./env/codeKey:/codeKey
       - ./env/all:/all
       - ./env/env1:/env
   jd2:
     <<: [ *logger, *common ]
     container_name: jd2
     volumes:
+      - ./env/codeKey:/codeKey
       - ./env/all:/all
       - ./env/env2:/env
   jd3:
     <<: [ *logger, *common ]
     container_name: jd3
     volumes:
+      - ./env/codeKey:/codeKey
       - ./env/all:/all
       - ./env/env3:/env
