@@ -12,7 +12,7 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
 
 # git clone -b master git@gitee.com:lxk0301/jd_scripts.git /scripts_tmp
 # git clone --branch=master --depth=1 https://gitee.com/lxk0301/jd_scripts.git /scripts_tmp
-[ ! -d /scripts_tmp ] && {
+# [ ! -d /scripts_tmp ] && {
   # 添加KEY
   [ -e /codeKey ] && {
     echo '添加公钥'
@@ -23,31 +23,13 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
     # git clone --branch=master --depth=1 git@gitee.com:lxk0301/jd_scripts.git /scripts_tmp
     git clone -b master git@gitee.com:lxk0301/jd_scripts.git /scripts_tmp
   }
-}
+# }
 
 [ -d /scripts_tmp ] && {
   echo '覆盖新scripts'
   rm -rf /scripts
   mv /scripts_tmp /scripts
 }
-
-# # shylocks脚本
-# git clone --depth=1 https://github.com/shylocks/Loon.git /shylocks_scripts_tmp
-# [ -d /shylocks_scripts_tmp ] && {
-#   [ ! -f /shylocks_scripts_tmp/jdCookie.js ] && {
-#   	 cp -fr /scripts/jdCookie.js /shylocks_scripts_tmp/jdCookie.js
-#   }
-#   [ -d /shylocks_scripts ] && rm -rf /shylocks_scripts
-#   mv /shylocks_scripts_tmp /shylocks_scripts
-# }
-
-# # Sunert脚本
-# git clone --depth=1 https://github.com/Sunert/Scripts.git /sunert_scripts_tmp
-# [ -d /sunert_scripts_tmp ] && {
-#   [ -d /sunert_scripts ] && rm -rf /sunert_scripts
-#   mv /sunert_scripts_tmp /sunert_scripts
-# }
-
 
 cd /scripts || exit 1
 npm install || npm install --registry=https://registry.npm.taobao.org || exit 1
