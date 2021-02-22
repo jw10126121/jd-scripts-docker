@@ -13,7 +13,7 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
 [ ! -d /scripts_tmp ] && {
   # 添加KEY
   [ -e /codeKey ] && {
-    [ ! -d /root/.ssh ] && mkdir -p /root/.ssh
+    [ ! -d /root/.ssh ] && { mkdir -p /root/.ssh }
     cat /codeKey > /root/.ssh/id_rsa
     chmod 700 /root/.ssh/id_rsa
     ssh-keyscan gitee.com > /root/.ssh/known_hosts
