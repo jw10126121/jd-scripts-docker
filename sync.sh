@@ -25,7 +25,7 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
 # }
 
 [[ -d /scripts_tmp ]] && {
-  echo '覆盖新scripts'
+  echo '更新成功，覆盖新scripts'
   rm -rf /scripts
   mv /scripts_tmp /scripts
 }
