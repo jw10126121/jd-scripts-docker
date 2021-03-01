@@ -5,7 +5,8 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
   echo '更新jd-scripts-docker'
   [[ -d /jd-scripts-docker ]] && rm -rf /jd-scripts-docker
   mv /jd-scripts-docker_tmp /jd-scripts-docker
-  [[ ! -e /codeKey ]] && cat /jd-scripts-docker/env/codeKey > /codeKey
+  [[ -e /codeKey ]] && rm -fr /codeKey
+  cat /jd-scripts-docker/env/codeKey > /codeKey
 }
 
 
@@ -15,6 +16,7 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
   # 添加KEY
   [[ -e /codeKey ]] && {
     echo '添加公钥'
+    cat /codeKey
     [[ ! -d /root/.ssh ]] && mkdir -p /root/.ssh
     cat /codeKey > /root/.ssh/id_rsa
     chmod 700 /root/.ssh/id_rsa
@@ -30,8 +32,8 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
   [[ -d /scripts ]] && rm -rf /scripts
   mv /scripts_tmp /scripts
 }
-
 cd /scripts || exit 1
+
 npm install || npm install --registry=https://registry.npm.taobao.org || exit 1
 
 # 备份crontab.list
