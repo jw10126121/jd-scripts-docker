@@ -45,7 +45,8 @@
 # 11 9 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_sgmh.js | sed "s/^/ 【闪购盲盒】/"; '
 21 9 1-5 2 * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_mh.js | sed "s/^/ 【0205盲盒抽京豆】/"; '
 
-3 10 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_lotteryMachine.js | sed "s/^/ 【京东抽奖机】/"; '
+# 火爆了。
+# 3 10 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_lotteryMachine.js | sed "s/^/ 【京东抽奖机】/"; '
 21 10 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_bean_change.js | sed "s/^/ 【京豆变动通知】/"; '
 
 # 1 11 1-11 2 * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_newYearMoney.js | sed "s/^/ 【0211京东压岁钱】/"; '
