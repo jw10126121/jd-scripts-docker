@@ -32,6 +32,18 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
   [[ -d /scripts ]] && rm -rf /scripts
   mv /scripts_tmp /scripts
 }
+
+
+# cui521脚本
+git clone --depth=1 https://github.com/cui521/jdqd.git /jdqd_tmp
+[[ -d /jdqd_tmp ]] && {
+  [[ -d /jdqd ]] && rm -rf /jdqd
+  mv /jdqd_tmp /jdqd
+  cp /jdqd/DIY_shopsign.js /scripts/DIY_shopsign.js
+}
+
+
+
 cd /scripts || exit 1
 
 npm install || npm install --registry=https://registry.npm.taobao.org || exit 1
