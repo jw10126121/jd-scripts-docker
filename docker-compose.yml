@@ -19,6 +19,7 @@ services:
       docker_name: jd1
     volumes:
       - ./env/all:/all
+      - ./env/sshCodeKey:/sshCodeKey
       - ./env/env1:/env
   jd2:
     <<: [ *logger, *common ]
@@ -27,6 +28,7 @@ services:
       docker_name: jd2
     volumes:
       - ./env/all:/all
+      - ./env/sshCodeKey:/sshCodeKey
       - ./env/env2:/env
   jd3:
     <<: [ *logger, *common ]
@@ -35,6 +37,7 @@ services:
       docker_name: jd3
     volumes:
       - ./env/all:/all
+      - ./env/sshCodeKey:/sshCodeKey
       - ./env/env3:/env
   jd4:
     <<: [ *logger, *common ]
@@ -43,6 +46,7 @@ services:
       docker_name: jd4
     volumes:
       - ./env/all:/all
+      - ./env/sshCodeKey:/sshCodeKey
       - ./env/env4:/env
   jd5:
     <<: [ *logger, *common ]
@@ -51,6 +55,7 @@ services:
       docker_name: jd5
     volumes:
       - ./env/all:/all
+      - ./env/sshCodeKey:/sshCodeKey
       - ./env/env5:/env
   jd6:
     <<: [ *logger, *common ]
@@ -59,4 +64,5 @@ services:
       docker_name: jd6
     volumes:
       - ./env/all:/all
+      - ./env/sshCodeKey:/sshCodeKey
       - ./env/env6:/env

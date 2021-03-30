@@ -6,7 +6,8 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
   [[ -d /jd-scripts-docker ]] && rm -rf /jd-scripts-docker
   mv /jd-scripts-docker_tmp /jd-scripts-docker
   [[ -e /codeKey ]] && rm -fr /codeKey
-  cat /jd-scripts-docker/env/codeKey > /codeKey
+  [[ -e /jd-scripts-docker/env/codeKey ]] && cat /jd-scripts-docker/env/codeKey > /codeKey
+  [[ ! -e /jd-scripts-docker/env/codeKey ]] && cat /sshCodeKey > /codeKey
 }
 
 
