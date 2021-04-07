@@ -23,7 +23,6 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
 
 # git clone -b master git@gitee.com:lxk0301/jd_scripts.git /scripts_tmp
 # git clone --branch=master --depth=1 https://gitee.com/lxk0301/jd_scripts.git /scripts_tmp
-# [ ! -d /scripts_tmp ] && {
   # 添加KEY
   [[ -e /codeKey ]] && {
     echo '添加公钥'
@@ -34,9 +33,7 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
     ssh-keyscan gitee.com > /root/.ssh/known_hosts
     cd /
     git clone --branch=master --depth=1 git@gitee.com:lxk0301/jd_scripts.git /scripts_tmp
-    # git clone -b master git@gitee.com:lxk0301/jd_scripts.git /scripts_tmp
   }
-# }
 
 [[ -d /scripts_tmp ]] && {
   echo '更新成功，覆盖新scripts'
@@ -54,14 +51,12 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
 # }
 
 # shuye
-git clone --depth=1 https://github.com/wuzhi01/MyActions.git /shuye_tmp
-[[ -d /shuye_tmp ]] && {
-  [[ -d /shuye ]] && rm -rf /shuye
-  mv /shuye_tmp /shuye
-  cp /shuye/jd_ShopSign.js /scripts/jd_ShopSign.js
-}
-
-
+# git clone --depth=1 https://github.com/wuzhi01/MyActions.git /shuye_tmp
+# [[ -d /shuye_tmp ]] && {
+#   [[ -d /shuye ]] && rm -rf /shuye
+#   mv /shuye_tmp /shuye
+#   cp /shuye/jd_ShopSign.js /scripts/jd_ShopSign.js
+# }
 
 
 cd /scripts || exit 1
