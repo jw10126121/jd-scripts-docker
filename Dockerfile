@@ -9,7 +9,7 @@ RUN date
 RUN mkdir -p /root/.ssh
 
 WORKDIR /
-COPY env/sshCodeKey /sshCodeKey
+COPY env/sshCodeKey /sshCodeKey_first
 COPY sync.sh /sync.sh
 RUN bash /sync.sh
 CMD crontab -l && crond -f

@@ -6,6 +6,7 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
   [[ -d /jd-scripts-docker ]] && rm -rf /jd-scripts-docker
   mv /jd-scripts-docker_tmp /jd-scripts-docker
   [[ -e /codeKey ]] && rm -fr /codeKey
+  
   [[ -e /jd-scripts-docker/env/sshCodeKey ]] && {
     echo '复制/jd-scripts-docker/env/codeKey'
     cat /jd-scripts-docker/env/sshCodeKey > /codeKey
@@ -16,6 +17,14 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
       echo '复制/sshCodeKey'
       cat /sshCodeKey > /codeKey
     }
+
+    [[ ! -e /sshCodeKey ]] && {
+      [[ -e /sshCodeKey_first ]] && {
+        echo '复制/sshCodeKey_first'
+        cat /sshCodeKey_first > /codeKey
+      }
+    }
+
   }
 
 }
