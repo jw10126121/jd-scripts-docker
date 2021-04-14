@@ -29,7 +29,7 @@
 # 1 2 18-31 1 * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_nian_sign.js | sed "s/^/ 【京东签到炸年兽】/"; '
 # 1 2 1-11 2 * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_nian_sign.js | sed "s/^/ 【京东签到炸年兽】/"; '
 
-1 5 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_ShopSign.js | sed "s/^/ 【京东店铺签到领豆suye】/"; '
+# 1 5 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_ShopSign.js | sed "s/^/ 【京东店铺签到领豆suye】/"; '
 6 5 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/monk_inter_shop_sign.js | sed "s/^/ 【京东店铺签到领豆monk_inter_shop_sign】/"; '
 
 
