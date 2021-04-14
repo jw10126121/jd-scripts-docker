@@ -73,6 +73,22 @@ git clone --depth=1 https://gitee.com/shuye72/MyActions.git /shuye_tmp
   cp /shuye/jd_ShopSign.js /scripts/jd_ShopSign.js
 }
 
+cd /scripts || exit 1
+wget https://share.r2ray.com/dust/car/monk_shop_add_to_car.js
+wget https://share.r2ray.com/dust/car/monk_skyworth_car.js
+wget https://share.r2ray.com/dust/i-chenzhe/z_entertainment.js
+wget https://share.r2ray.com/dust/i-chenzhe/z_fanslove.js
+wget https://share.r2ray.com/dust/i-chenzhe/z_marketLottery.js
+wget https://share.r2ray.com/dust/i-chenzhe/z_mother_jump.js
+wget https://share.r2ray.com/dust/i-chenzhe/z_shake.js
+wget https://share.r2ray.com/dust/i-chenzhe/z_super5g.js
+wget https://share.r2ray.com/dust/i-chenzhe/z_xmf.js
+wget https://share.r2ray.com/dust/member/monk_pasture.js
+wget https://share.r2ray.com/dust/member/monk_vinda.js
+wget https://share.r2ray.com/dust/normal/monk_inter_shop_sign.js
+wget https://share.r2ray.com/dust/normal/monk_shop_follow_sku.js
+wget https://share.r2ray.com/dust/normal/monk_shop_lottery.js
+
 
 cd /scripts || exit 1
 
