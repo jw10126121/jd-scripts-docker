@@ -65,13 +65,13 @@ git clone --depth=1 https://github.com/jw10126121/jd-scripts-docker.git /jd-scri
 #   cp /jdqd/DIY_shopsign.js /scripts/DIY_shopsign.js
 # }
 
-# shuye 树叶的下载太慢了，先隐藏了，而且，有同功能的monk_inter_shop_sign了
-# git clone --depth=1 https://gitee.com/shuye72/MyActions.git /shuye_tmp
-# [[ -d /shuye_tmp ]] && {
-#   [[ -d /shuye ]] && rm -rf /shuye
-#   mv /shuye_tmp /shuye
-#   cp /shuye/jd_ShopSign.js /scripts/jd_ShopSign.js
-# }
+# shuye
+git clone --depth=1 https://gitee.com/shuye72/MyActions.git /shuye_tmp
+[[ -d /shuye_tmp ]] && {
+  [[ -d /shuye ]] && rm -rf /shuye
+  mv /shuye_tmp /shuye
+  cp /shuye/jd_ShopSign.js /scripts/jd_ShopSign.js
+}
 
 cd /scripts || exit 1
 # (这个要加购物车) 15 12 * * * https://share.r2ray.com/dust/car/monk_shop_add_to_car.js, tag=加购有礼,  enabled=true
