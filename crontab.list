@@ -67,6 +67,7 @@
 16 13,17,21 1-31 3 * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_mohe.js | sed "s/^/ 【5G超级盲盒】/"; '
 16 13,17,21 1-30 4 * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_mohe.js | sed "s/^/ 【5G超级盲盒】/"; '
 
+# 可能黑了。
 6 14 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/z_entertainment.js | sed "s/^/ 【百变大咖秀】/"; '
 # 可能黑了。
 # 11 14 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/monk_shop_lottery.js | sed "s/^/ 【店铺大转盘】/"; '
