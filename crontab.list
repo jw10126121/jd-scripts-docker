@@ -40,8 +40,8 @@
 3 7,11,18 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_fruit.js | sed "s/^/ 【东东农场】/"; '
 26 7,11,18 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_pet.js | sed "s/^/ 【东东萌宠】/"; '
 
-1 8,16 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; JD_JOY_REWARD_NAME=500; source /jd-scripts-docker/resolve.sh; cd /scripts; node /scripts/jd_joy_reward.js | sed "s/^/ 【宠汪汪积分兑换500京豆】/"; '
-2 8,16 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_joy_reward.js | sed "s/^/ 【宠汪汪积分兑换京豆】/"; '
+0 8,16 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; JD_JOY_REWARD_NAME=500; source /jd-scripts-docker/resolve.sh; cd /scripts; node /scripts/jd_joy_reward.js | sed "s/^/ 【宠汪汪积分兑换500京豆】/"; '
+0 8,16 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep $(echo $RANDOM | cut -c 2-3) && node /scripts/jd_joy_reward.js | sed "s/^/ 【宠汪汪积分兑换京豆】/"; '
 13 8 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_kd.js | sed "s/^/ 【京东快递】/"; '
 18 8 * * * bash -c ' exec 1<>/proc/1/fd/1; exec 2<>/proc/1/fd/2; set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; sleep 1$(echo $RANDOM | cut -c 2-3) && node /scripts/jd_syj.js | sed "s/^/ 【赚京豆】/"; '
 
