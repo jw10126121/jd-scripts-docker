@@ -85,7 +85,7 @@ wget https://share.r2ray.com/dust/i-chenzhe/z_fanslove.js
 # 3 10 * * * https://share.r2ray.com/dust/i-chenzhe/z_marketLottery.js, tag=京东超市-大转盘,  enabled=true
 wget https://share.r2ray.com/dust/i-chenzhe/z_marketLottery.js
 # (这个，好像没什么用) 5 8,14,20 13-19 4 * https://share.r2ray.com/dust/i-chenzhe/z_mother_jump.js, tag=母婴-跳一跳, enabled=true
-wget https://share.r2ray.com/dust/i-chenzhe/z_mother_jump.js
+# wget https://share.r2ray.com/dust/i-chenzhe/z_mother_jump.js
 # 3 20 * * * https://share.r2ray.com/dust/i-chenzhe/z_shake.js, tag=摇一摇,  enabled=true
 wget https://share.r2ray.com/dust/i-chenzhe/z_shake.js
 # 5 1,6,11,16,21 * 3-4 * https://share.r2ray.com/dust/i-chenzhe/z_super5g.js, tag=5G超级盲盒, enabled=true
@@ -93,7 +93,7 @@ wget https://share.r2ray.com/dust/i-chenzhe/z_super5g.js
 # 10 10 7-9 4 * https://share.r2ray.com/dust/i-chenzhe/z_xmf.js, tag=京东小魔方,  enabled=true
 wget https://share.r2ray.com/dust/i-chenzhe/z_xmf.js
 # （要开卡） 0 0,1-22/2 1-31 4-7 * https://share.r2ray.com/dust/member/monk_pasture.js, tag=有机牧场,  enabled=true
-wget https://share.r2ray.com/dust/member/monk_pasture.js
+# wget https://share.r2ray.com/dust/member/monk_pasture.js
 # 15 08 5-30 4 * https://share.r2ray.com/dust/member/monk_vinda.js.js, tag=“韧”性探索 空降好礼,  enabled=true
 wget https://share.r2ray.com/dust/member/monk_vinda.js
 # 0 0 * * * https://share.r2ray.com/dust/normal/monk_inter_shop_sign.js, tag=interCenter渠道店铺签到,  enabled=true
